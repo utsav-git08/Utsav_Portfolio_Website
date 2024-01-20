@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+}
+.navlist li{
+    list-style: none;
+    
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+.navlist li a:hover ,.navlist .active{
+    color: #6e0f89;
+    font-weight: bold;
+}
+.black , .purple{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.black{
+    background: #201f1f;
+    width: 70%;
+    padding-left: 3rem;
+}
+.purple{
+    background: linear-gradient(-45deg, #6e0f89 , #201f1f 70%);
+    width: 30%;
+}
+.icons .fa-brands{
+    font-size: 1.9rem;
+    color: #bbb;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center
+}
+.content{
+    padding-left: 3rem;
+}
+.content .intro{
+    font-size: 1.3rem;
+    color: #fff;
+}
+.content .intro .name{
+    font-size: 1.5rem;
+    color: #6e0f89;
+}
+.content h1{
+    color: #6e0f89;
+    margin: 1.1rem 0rem 1.1rem 0rem;
+
+}
+.content .details{
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0rem 3rem 0rem;
+    line-height: 1.8rem;
+}
+.btn button{
+    border: .2rem solid #6e0f89;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding: .8rem 1.5rem;
+    cursor: grabbing;
+}
+button:nth-child(1){
+    background-color: #6e0f89;
+}
+button:nth-child(2){
+    background-color: transparent;
+    color: #6e0f89;
+    margin-left: 1.8rem;
+}
+button:nth-child(1):hover{
+    background-color: transparent;
+    color: #6e0f89;
+}
+button:nth-child(2):hover{
+    background-color:#6e0f89;
+    color: black;
+}
+.icons .fa-brands:hover{
+    cursor: grab;
+    background: linear-gradient(#fff, #6e0f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #201f1f 50% );
+    width: 38rem;
+}
+.circle:nth-child(2){
+    background-image: url(Image.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30rem;
+    box-shadow: 
+    0 0 3rem #fff;
+}
+.navlist li a::after, .navlistl .active::after{
+    content: "";
+    color: #6e0f89;
+    position: absolute;
+    background: #6e0f89;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -.5rem;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition-delay: .3s;
+    transition: transform .5s;
+}
+.navlist li a:hover::after , .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #6e0f89;
+}
